@@ -25,11 +25,12 @@ public class MostrarEditoriales {
 			sentencia = con.createStatement();
 			
 			// Paso 3. Ejecutar la sentencia
-			resultado = sentencia.executeQuery("select * from editoriales");
+			resultado = sentencia.executeQuery("select * from editoriales"); //bien la consulta
 			
 			System.out.println("Año \t Codigo Editorial\t Nombre");
 			// Paso 4. Recorrer el resultado
 			while (resultado.next()) {
+				// datos correctos y acordes a tabla
 				int anio = resultado.getInt("anio");
 				int codEditorial = resultado.getInt("codEditorial");
 				String nombre = resultado.getString("nombre");
